@@ -104,7 +104,7 @@
       when: service_status.stdout != "active"
       ignore_errors: true
 
-   - name: Display recent logs for debugging
+    - name: Display recent logs for debugging
       ansible.builtin.debug:
         var: service_logs.stdout_lines
       when: service_status.stdout != "active"
